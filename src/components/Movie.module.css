@@ -1,54 +1,75 @@
-.movie {
-    background-color: white;
-    margin-bottom: 70px;
-    font-weight: 300;
-    padding: 20px;
-    border-radius: 5px;
-    color: #adaeb9;
-    display: grid;
-    grid-template-columns: minmax(150px, 1fr) 2fr;
-    grid-gap: 20px;
-    text-decoration: none;
-    color: inherit;
-    box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25),
-      0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025);
-  }
+body{
+    margin-left: 100px;
+}
+.movie{
+   float: left;
+   display: flex;
+   align-items: center;
+   margin: 10px;
+   position: relative;
 
-  .movie__img {
+}
+.imgWrap{
+    width: 350px;
+    height: 540px;
+}
+.movieImg{
+    width: 350px;
+    height: 540px;
+    display: block;
+
+}
+
+.figcaption{
+    float: left;
+    width: 350px;
+    height: 540px;
+   background-color: rgba(0,0,0,0.5);
+    color: white;
     position: relative;
-    top: -50px;
-    max-width: 150px;
-    width: 100%;
-    margin-right: 30px;
-    box-shadow: 0 30px 60px -12px rgba(50, 50, 93, 0.25),
-      0 18px 36px -18px rgba(0, 0, 0, 0.3), 0 -12px 36px -8px rgba(0, 0, 0, 0.025);
-  }
+    bottom: 540px;
+    opacity: 0;
 
-  .movie__title,
-  .movie__year {
-    margin: 0;
-    font-weight: 300;
-    text-decoration: none;
-  }
+}
 
-  .movie__title a {
-    margin-bottom: 5px;
-    font-size: 24px;
-    color: #2c2c2c;
-    text-decoration: none;
-  }
+.Link, .Link:visited  {
+text-decoration: none;
+color: antiquewhite;
 
-  .movie__genres {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-wrap: wrap;
-    margin: 5px 0px;
-  }
+}
+.figcaption:hover{
+    opacity: 1;
+}
 
-  .movie__genres li,
-  .movie__year {
-    margin-right: 10px;
-    font-size: 14px;
-  }
+.info{
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0px 20px;
+    margin-top: 70px;
+
+}
+.movieTitle{
+    text-decoration-line: none ;
+    color: rgb(203, 186, 225);
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 20px;
+    font-size: 40px;
+
+}
+.figcaption p{
+    height: 200px;
+    font-size: 20px;
+    overflow: hidden;
+
+}
+.figcaption ul{
+    height: 80px;
+}
+.genres{
+    background-color: rgb(140, 107, 183);
+}
+.figcaption ul li {
+    box-sizing: border-box;
+    list-style-type: none;
+    font-size: 15px;
+    text-align: left;
+}

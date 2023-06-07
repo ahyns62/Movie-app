@@ -1,4 +1,8 @@
 .title {
-    font-family:'Courier New', Courier, monospace;
-    font-size: 18px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 18px;
+}
+
+.App {
+  text-align: center;
 }

@@ -4,23 +4,33 @@ import styles from "./Movie.module.css";
 
 function Movie({ id, coverImg, title, summary, rating, genres }) {
   return (
-    <li>
+    <div>
       <div className={styles.movie}>
-        <Link to={`/movie/${id}`}>
-          <img src={coverImg} alt={title} />
-          <div>{title}</div>
-          <div>{rating}</div>
-          <p>
-            {summary.length > 235 ? `${summary.slice(0, 235)}...` : summary}
-          </p>
-          <ul>
-            {genres.map((g) => (
-              <li key={g}>{g}</li>
-            ))}
-          </ul>
-        </Link>
+        <figure className={styles.imgWrap}>
+          <img className={styles.movieImg} src={coverImg} alt={title} />
+
+          <figcaption className={styles.figcaption}>
+            <Link className={styles.Link} to={`/movie/${id}`}>
+              <div className={styles.info}>
+                <h2 className={styles.movieTitle}>{title}</h2>
+                <div>{rating}</div>
+                <p>
+                  {summary.length > 235
+                    ? `${summary.slice(0, 235)}...`
+                    : summary}
+                </p>
+                <div className={styles.genres}>Genres</div>
+                <ul>
+                  {genres.map((g) => (
+                    <li key={g}>{g}</li>
+                  ))}
+                </ul>
+              </div>
+            </Link>
+          </figcaption>
+        </figure>
       </div>
-    </li>
+    </div>
   );
 }
 
